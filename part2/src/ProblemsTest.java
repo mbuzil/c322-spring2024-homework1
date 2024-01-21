@@ -1,33 +1,53 @@
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class ProblemsTest {
-
-
-    @org.junit.jupiter.api.Test
-    void problem1() {
+    @Test
+    public void testProblem1() {
+        int[] nums = {2, 11, 7, 15};
+        int target = 9;
+        assertEquals("Problem 1: 7 and 2", Problems.problem1(nums, target));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem2() {
+    @Test
+    public void testProblem2() {
+        assertEquals("Problem 2: 121, true", Problems.problem2(121));
+        assertEquals("Problem 2: -121, false", Problems.problem2(-121));
+        assertEquals("Problem 2: 01, false", Problems.problem2(10));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem3() {
+    @Test
+    public void testProblem3() {
+        String[] input = {"flower", "flow", "flight"};
+        assertEquals("Problem 3: fl", Problems.problem3(input));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem4() {
+    @Test
+    public void testProblem4() {
+        assertEquals("Problem 4: 9", Problems.problem4("IX"));
+        assertEquals("Problem 4: 1994", Problems.problem4("MCMXCIV"));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem5() {
+    @Test
+    public void testProblem5() {
+        assertEquals("Problem 5: true", Problems.problem5("()[]{}"));
+        assertEquals("Problem 5: false", Problems.problem5("(]"));
+        assertEquals("Problem 5: false", Problems.problem5("([)]"));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem6() {
+    @Test
+    public void testProblem6() {
+        int[] list1 = {1, 2, 4};
+        int[] list2 = {1, 3, 4};
+        assertEquals("Problem 6: [1, 1, 2, 3, 4, 4]", Problems.problem6(list1, list2));
     }
 
-    @org.junit.jupiter.api.Test
-    void problem7() {
+    @Test
+    public void testProblem7() {
+        int[] digits = {1, 2, 9};
+        int[] digits2 = {1,2,3};
+        assertEquals("Problem 7: [1,3,0]", Problems.problem7(digits));
+        assertEquals("Problem 7: [1,2,4]", Problems.problem7(digits2));
     }
 }

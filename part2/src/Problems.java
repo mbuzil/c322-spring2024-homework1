@@ -10,7 +10,7 @@ public class Problems
         int[] nums = {2,11,7,15};
         int target = 9;
         System.out.println(problem1(nums, target));
-        int x = 121;
+        int x = -121;
         System.out.println(problem2(x));
         String[] input = {"flower", "flow", "flight"};
         System.out.println(problem3(input));
@@ -54,6 +54,8 @@ public class Problems
             if (x == z)
                 palendrome = true;
         }
+        else
+            y += x;
         return("Problem 2: " + y+", "+palendrome);
     }
 
